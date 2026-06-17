@@ -1,0 +1,53 @@
+[2026-06-17T02:52:30.333+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-17T02:52:30.363+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_bash_operator.run_after_loop manual__2026-06-17T02:52:14+00:00 [queued]>
+[2026-06-17T02:52:30.369+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_bash_operator.run_after_loop manual__2026-06-17T02:52:14+00:00 [queued]>
+[2026-06-17T02:52:30.369+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-06-17T02:52:30.382+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_after_loop> on 2026-06-17 02:52:14+00:00
+[2026-06-17T02:52:30.390+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=192) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-06-17T02:52:30.391+0000] {standard_task_runner.py:64} INFO - Started process 194 to run task
+[2026-06-17T02:52:30.392+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_bash_operator', 'run_after_loop', 'manual__2026-06-17T02:52:14+00:00', '--job-id', '44', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_bash_operator.py', '--cfg-path', '/tmp/tmpik3ht_zl']
+[2026-06-17T02:52:30.394+0000] {standard_task_runner.py:91} INFO - Job 44: Subtask run_after_loop
+[2026-06-17T02:52:30.432+0000] {task_command.py:426} INFO - Running <TaskInstance: example_bash_operator.run_after_loop manual__2026-06-17T02:52:14+00:00 [running]> on host b23cd512edf1
+[2026-06-17T02:52:30.513+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_bash_operator' AIRFLOW_CTX_TASK_ID='run_after_loop' AIRFLOW_CTX_EXECUTION_DATE='2026-06-17T02:52:14+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-17T02:52:14+00:00'
+[2026-06-17T02:52:30.514+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-17T02:52:30.515+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-17T02:52:30.516+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "ls -alh --color=always / && echo https://***.apache.org/  && echo 'some <code>html</code>'"]
+[2026-06-17T02:52:30.530+0000] {subprocess.py:86} INFO - Output:
+[2026-06-17T02:52:30.597+0000] {subprocess.py:93} INFO - total 160K
+[2026-06-17T02:52:30.599+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jun 15 19:10 .
+[2026-06-17T02:52:30.600+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jun 15 19:10 ..
+[2026-06-17T02:52:30.600+0000] {subprocess.py:93} INFO - -rwxr-xr-x   1 root    root    0 Jun 15 19:10 .dockerenv
+[2026-06-17T02:52:30.601+0000] {subprocess.py:93} INFO - -rw-rw-r--   1 *** root  72K Jul 30  2024 Dockerfile
+[2026-06-17T02:52:30.602+0000] {subprocess.py:93} INFO - -rw-rw-r--   1 root    root  282 Jul 25  2024 ***-scheduler-autorestart
+[2026-06-17T02:52:30.603+0000] {subprocess.py:93} INFO - lrwxrwxrwx   1 root    root    7 Jul 22  2024 bin -> usr/bin
+[2026-06-17T02:52:30.604+0000] {subprocess.py:93} INFO - drwxr-xr-x   2 root    root 4.0K Mar 29  2024 boot
+[2026-06-17T02:52:30.604+0000] {subprocess.py:93} INFO - -rwxrwxr-x   1 root    root  643 Jul 25  2024 clean-logs
+[2026-06-17T02:52:30.607+0000] {subprocess.py:93} INFO - drwxr-xr-x   5 root    root  340 Jun 17 02:41 dev
+[2026-06-17T02:52:30.608+0000] {subprocess.py:93} INFO - -rwxrwxr-x   1 root    root  12K Jul 25  2024 entrypoint
+[2026-06-17T02:52:30.608+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jun 15 19:10 etc
+[2026-06-17T02:52:30.610+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jul 25  2024 home
+[2026-06-17T02:52:30.611+0000] {subprocess.py:93} INFO - lrwxrwxrwx   1 root    root    7 Jul 22  2024 lib -> usr/lib
+[2026-06-17T02:52:30.611+0000] {subprocess.py:93} INFO - lrwxrwxrwx   1 root    root    9 Jul 22  2024 lib64 -> usr/lib64
+[2026-06-17T02:52:30.612+0000] {subprocess.py:93} INFO - drwxr-xr-x   2 root    root 4.0K Jul 22  2024 media
+[2026-06-17T02:52:30.612+0000] {subprocess.py:93} INFO - drwxr-xr-x   2 root    root 4.0K Jul 22  2024 mnt
+[2026-06-17T02:52:30.613+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jul 25  2024 opt
+[2026-06-17T02:52:30.613+0000] {subprocess.py:93} INFO - dr-xr-xr-x 309 root    root    0 Jun 17 02:41 proc
+[2026-06-17T02:52:30.614+0000] {subprocess.py:93} INFO - drwx------   1 root    root 4.0K Aug  1  2024 root
+[2026-06-17T02:52:30.614+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jul 25  2024 run
+[2026-06-17T02:52:30.615+0000] {subprocess.py:93} INFO - lrwxrwxrwx   1 root    root    8 Jul 22  2024 sbin -> usr/sbin
+[2026-06-17T02:52:30.615+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jul 25  2024 scripts
+[2026-06-17T02:52:30.616+0000] {subprocess.py:93} INFO - drwxr-xr-x   2 root    root 4.0K Jul 22  2024 srv
+[2026-06-17T02:52:30.616+0000] {subprocess.py:93} INFO - dr-xr-xr-x  12 root    root    0 Jun 17 02:41 sys
+[2026-06-17T02:52:30.617+0000] {subprocess.py:93} INFO - drwxrwxrwt   1 root    root 4.0K Jun 17 02:52 tmp
+[2026-06-17T02:52:30.617+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jul 22  2024 usr
+[2026-06-17T02:52:30.618+0000] {subprocess.py:93} INFO - drwxr-xr-x   1 root    root 4.0K Jul 22  2024 var
+[2026-06-17T02:52:30.618+0000] {subprocess.py:93} INFO - https://***.apache.org/
+[2026-06-17T02:52:30.619+0000] {subprocess.py:93} INFO - some <code>html</code>
+[2026-06-17T02:52:30.619+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-06-17T02:52:30.620+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-17T02:52:30.676+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=example_bash_operator, task_id=run_after_loop, run_id=manual__2026-06-17T02:52:14+00:00, execution_date=20260617T025214, start_date=20260617T025230, end_date=20260617T025230
+[2026-06-17T02:52:30.698+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-17T02:52:30.714+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-17T02:52:30.715+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
